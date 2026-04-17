@@ -6,6 +6,12 @@ body, html {
     scroll-behavior: smooth; /* última versión gana */
 }
 
+body {
+    background-color: #000; /* Evita el flash blanco antes de cargar */
+    margin: 0;
+    padding: 0;
+}
+
 /* ================= FONDO ================= */
 #bg-video {
     position: fixed;
@@ -15,7 +21,8 @@ body, html {
     min-height: 100%;
     z-index: -2;
     object-fit: cover;
-    opacity: 0.97; /* última versión */
+    opacity: 0.95; 
+    background-color: black;
 }
 
 .overlay {
