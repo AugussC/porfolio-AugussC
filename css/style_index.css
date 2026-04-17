@@ -1,0 +1,96 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Press Start 2P';
+    color: #fff;
+    overflow: hidden;
+}
+
+/* Video fondo */
+#bg-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    opacity: 0.95;
+    object-fit: cover;
+}
+
+/* Contenedor */
+.arcade-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Título */
+.nombre-pixel {
+    color: #007bff;
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    text-shadow: 4px 4px #000;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+
+/* Menú */
+.arcade-menu {
+    list-style: none;
+    padding: 0;
+}
+
+.arcade-menu li {
+    margin: 25px 0;
+    position: relative;
+}
+
+.arcade-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: 0.2s;
+    display: inline-block;
+}
+
+.arcade-menu a::before {
+    content: '▶';
+    position: absolute;
+    left: -45px;
+    color: #ffff00;
+    visibility: hidden;
+}
+
+.arcade-menu a:hover {
+    color: #ffff00;
+    transform: scale(1.1);
+}
+
+.arcade-menu a:hover::before {
+    visibility: visible;
+    animation: blink 0.6s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Botón música */
+#musicToggle {
+    font-size: 18px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    opacity: 0.8;
+}
+
+#musicToggle:hover {
+    opacity: 1;
+    transform: scale(1.1);
+    transition: 0.2s;
+}
