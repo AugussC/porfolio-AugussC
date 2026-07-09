@@ -125,3 +125,30 @@ h2 {
     background-size: 60% 60%;
 }
 
+#imageModal .modal-body{
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+
+#modalCarousel{
+    position: relative;
+}
+
+#imageModal .carousel-item{
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+}
+
+#imageModal .carousel-item img{
+    max-width: 100%;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    margin: auto;
+}   
+
